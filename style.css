@@ -7,15 +7,16 @@
         width: 100%;
         background-color: #ff4500; /*#ff4500;*/
          height: 50px;
-        z-index:5;}
+        z-index:5;
+    }
 
-.sidebar{z-index: 4;
+.sidebar{
     width: 100%;
     background-color:#07b00d;
     height: 100vh;
     position: absolute;
     padding-top:50px;
-
+    z-index: 4;
 }
 .main-content{
     padding: 50%;
