@@ -16,7 +16,7 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 
 		
 	</div>
-	<div class="main content">
+	<div class="main-content">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-12 pt-5">
@@ -53,8 +53,9 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 											<td><?php echo $fetchEnrollmentRecord['created-at'] ?></td>	
 											<td>
 												<a href="edit-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>" class="btn btn-info btn-sm">
+												<a href="view-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>"class="btn btn-info btn-sm">
 												<i class="fa fa-edit"></i>
-											</a>
+												</a>
 						
 										<a href="#" class="btn btn-info btn-sm">
 											<i class="fa fa-eye"></i>
