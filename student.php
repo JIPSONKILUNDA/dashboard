@@ -12,9 +12,7 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 	<?php require_once('includes/navbar.php')?>
 
 	<div class="sidebar">
-	<?php require_once('includes/sidebar.php')?>
-
-		
+		<?php require_once('includes/sidebar.php')?>	
 	</div>
 	<div class="main-content">
 		<div class="container-fluid">
@@ -53,15 +51,15 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 											<td><?php echo $fetchEnrollmentRecord['created-at'] ?></td>	
 											<td>
 												<a href="edit-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>" class="btn btn-info btn-sm">
-												<a href="view-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>"class="btn btn-info btn-sm">
-												<i class="fa fa-edit"></i>
+													<i class="fa fa-edit"></i>
 												</a>
-						
-										<a href="#" class="btn btn-info btn-sm">
-											<i class="fa fa-eye"></i>
-										</a> 
-										<a href="#" class="btn btn-danger btn-sm">
-											<i class="fa fa-trash"></i>
+												<a href="view-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>"class="btn btn-info btn-sm">
+													<i class="fa fa-eye"></i>
+												</a>
+							
+												<a href="delete-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>"class="btn btn-info btn-sm">
+													<i class="fa fa-trash"></i>
+												</a>
 										</tr>
 										<?php } ?>
 							</tbody>

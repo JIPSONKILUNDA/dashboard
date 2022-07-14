@@ -1,13 +1,14 @@
 <?php
 require_once('logics/dbconnection.php');
-"DELETE FRO, enrollment WHERE no ='".$_GET['id']."' ");
-if($sqqDeleteStudent)
+$sqlDeleteStudent =mysqli_query ($conn,
+"DELETE FROM enrollment WHERE no='".$_GET['id']."' ");
+if($sqlDeleteStudent)
 {
     echo "user deleted successfully";
-
+header('location:student.php');
 }
 else
 {
-    echo "Errol occured.please try again";
+    echo "Error occured.please try again";
 }
 ?>

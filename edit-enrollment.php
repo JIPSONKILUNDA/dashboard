@@ -1,5 +1,7 @@
 <?php
+$message="";
 require_once('logics/dbconnection.php');
+
 $querystudent =mysqli_query($conn, "SELECT * FROM enrollment WHERE no='".$_GET['id']."'");
 while($fetchstudent = mysqli_fetch_array($querystudent))
 {
@@ -23,16 +25,17 @@ require_once('logics/process-update.php');
 	<div class="sidebar">
 	    <?php require_once('includes/sidebar.php')?>
 	</div>
-	<div class="main content">
+	<div class="main-content">
 		<div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 pt-5">
-                    <div class="card">
+                    <div class="card p-3">
                         <div class="card-header bg-dark text-white text-center" >
                             <h4>Edit student<?php echo $fullname?></h4>
+                            <?php echo $message?>
                         </div>
-                        <div class="card">
-                            <form action="enroll.php" method="POST">
+                        <div class="card-body">
+                            <form action="edit-enrollment.php?id=<?php echo $id?>" method="POST">
                                 <div class="row">
                                     <div class="mb-3 col-lg-6">
                                         <label for="fullname" class="form-label"> fullname</label>
@@ -50,35 +53,29 @@ require_once('logics/process-update.php');
                                     </div>
                                     <div class="mb-3 col-lg-6">
                                         <label for="gender" class="form-label">gender</label>
-                                        <option value="">--select your gender--</option>
-                                        <select name="gender" value="<?php echo $phonenumber?>"class="form-control" >
+                                        
+                                        <select name="gender" class="form-control" >
+                                            <option value=""><?php echo $gender?></option>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
-
                                         </select>
-                                        <div class="row pt-3">
-                                            <div class="col-lg-6">
-                                        <button type="submit" class="btn btn-primary">Update records</button>
-                                        </div>
-                                        </div>
-                                        
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <label for="whats your prefered course?" class="form-label">what is your prefered course</label>
-                                        <option value="">--select your course--</option>
-                                        <select name="course" class="form-control">
+                                        <select name="course" class="form-control">                                        
+                                            <option value=""><?php echo $course ?></option>
                                             <option value="web design">web design</option>
                                             <option value="cyber security">cyber security</option>
                                         </select>
                                     </div>
-                                    <button type="submit" name="submit" class="btn btn-primary">submit application</button>  
                                 </div>
                               
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <input type="email" class="form-control" placeholder="enter your email address">
+                                <div class="row pt-5">
+                                    <div class="col-lg-4">                                    
+                                        <button type="submit" name="submit" class="btn btn-primary">submit application</button>  
+
                                     </div>
                                 </div>
                             </form> 
