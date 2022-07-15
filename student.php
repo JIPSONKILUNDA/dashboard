@@ -60,6 +60,9 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 												<a href="delete-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>"class="btn btn-info btn-sm">
 													<i class="fa fa-trash"></i>
 												</a>
+												<a href="contactus.php.php?id=<?php echo $fetchcontactusRecord['no']?>"class="btn btn-info btn-sm">
+													<i class="fa fa-trash"></i>
+                                </a>
 										</tr>
 										<?php } ?>
 							</tbody>
