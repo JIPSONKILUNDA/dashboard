@@ -61,7 +61,7 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 													<i class="fa fa-trash"></i>
 												</a>
 												<a href="contactus.php.php?id=<?php echo $fetchcontactusRecord['no']?>"class="btn btn-info btn-sm">
-													<i class="fa fa-trash"></i>
+													<i class="fa fa-envelope"></i>
                                 </a>
 										</tr>
 										<?php } ?>

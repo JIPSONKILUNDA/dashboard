@@ -53,7 +53,17 @@ $sql = mysqli_query($conn, "SELECT * FROM contactus");
 											<td><?php echo $fetchcontactusRecord['created-at'] ?></td>	
 											<td>
 												
-                            
+											</a>
+												<a href="contactus.php.php?id=<?php echo $fetchcontactusRecord['no']?>"class="btn btn-info btn-sm">
+													<i class="fa fa-envelope"></i>
+                                </a>
+								<a href="edit-enrollment.php?id=<?php echo $fetchcontactusRecord['no']?>" class="btn btn-info btn-sm">
+													<i class="fa fa-edit"></i>
+												</a>
+							
+												<a href="delete-enrollment.php?id=<?php echo $fetchcontactusgit Record['no']?>"class="btn btn-info btn-sm">
+													<i class="fa fa-trash"></i>
+												</a>
 										</tr>
 										<?php } ?>
 							</tbody>
