@@ -59,11 +59,11 @@ $sql = mysqli_query($conn, "SELECT * FROM contactus");
                                 </a>
 								<a href="edit-enrollment.php?id=<?php echo $fetchcontactusRecord['no']?>" class="btn btn-info btn-sm">
 													<i class="fa fa-edit"></i>
-												</a>
-							
-												<a href="delete-enrollment.php?id=<?php echo $fetchcontactusgit Record['no']?>"class="btn btn-info btn-sm">
+								</a>
+												<a href="delete-enrollment.php?id=<?php echo $fetchcontactusRecord['no']?>"class="btn btn-info btn-sm">
 													<i class="fa fa-trash"></i>
 												</a>
+												<a>
 										</tr>
 										<?php } ?>
 							</tbody>

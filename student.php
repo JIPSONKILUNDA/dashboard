@@ -19,7 +19,8 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 			<div class="row">
 				<div class="col-lg-12 pt-5">
 					<div class="card-header bg-dark text-white text-center">
-						<span>Top content</span>
+						<span>students</span>
+						<a href="add student.php" class="btn-warning pull-right">add</a>
 
 					</div>
 					<div class="card-body">
@@ -63,6 +64,9 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 												<a href="contactus.php.php?id=<?php echo $fetchcontactusRecord['no']?>"class="btn btn-info btn-sm">
 													<i class="fa fa-envelope"></i>
                                 </a>
+								<a href="delete-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>"class="btn btn-info btn-sm">
+													<i class="fa fa-add"></i>
+												</a>
 										</tr>
 										<?php } ?>
 							</tbody>
